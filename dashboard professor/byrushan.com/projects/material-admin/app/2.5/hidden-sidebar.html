@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no'>
+
+    <!-- Vendor styles -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.css'>
+
+    <!-- App styles -->
+    <link rel='stylesheet' href='css/app.min.css'>
+</head>
+
+<body data-ma-theme='green'>
+    <main class='main'>
+        <div class='page-loader'>
+            <div class='page-loader__spinner'>
+                <svg viewBox='25 25 50 50'>
+                    <circle cx='50' cy='50' r='20' fill='none' stroke-width='2' stroke-miterlimit='10' />
+                </svg>
+            </div>
+        </div>
+
+        <header class='header'>
+            <div class='navigation-trigger' data-ma-action='aside-open' data-ma-target='.sidebar'>
+                <div class='navigation-trigger__inner'>
+                    <i class='navigation-trigger__line'></i>
+                    <i class='navigation-trigger__line'></i>
+                    <i class='navigation-trigger__line'></i>
+                </div>
+            </div>
+
+            <div class='header__logo hidden-sm-down'>
+                <h1><a href='fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 276 ; Get ( FileName ) ) & "'>Centro
+                        de Idiomas - Tiago Denardi</a></h1>
+            </div>
+
+            <ul class="top-nav">
+                <li>
+                    <a href='fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 285 ; Get ( FileName ) ) & "'>
+                        <i class="zmdi zmdi-square-right"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </header>
+
+        <aside class='sidebar sidebar--hidden'>
+            <div class='scrollbar-inner'>
+                <div class='user'>
+                    <div class='user__info' data-toggle='dropdown'>
+                        <img class='user__img' src='data:image/png;base64, "& $$user.photo &"' alt=''>
+                        <div>
+                            <div class='user__name'>"& $$user.nome &"</div>
+                            <div class='user__email'>"& $$user.email &"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class='navigation'>
+                    <li class='navigation__active'>
+                        <a href='fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 276 ; Get ( FileName ) ) & "'>
+                            <i class='zmdi zmdi-home'></i> Tela inicial
+                        </a>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href=''><i class='zmdi zmdi-accounts-list'></i> Alunos</a>
+
+                        <ul>
+                            <li>
+                                <a href='fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 283 ; Get ( FileName ) ) & "'>
+                                    <i class='zmdi zmdi-plus'></i> Cadastrar
+                                </a>
+                            </li>
+                            <li>
+                                <a href='fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 284 ; Get ( FileName ) ) & "'>
+                                    <i class='zmdi zmdi-search'></i> Consultar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <!-- <button class="btn btn-light" data-toggle="modal" data-target="#modal-default">Default modal</button> -->
+                        <a href='#modal-default' data-toggle="modal" data-target="#modal-default">
+                            <i class='zmdi zmdi-lock-outline'></i> Senha
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class='content content--full'>
+
+
+            <div class="card card--inverse widget-pie">
+                <div class="col-6 col-sm-4 col-md-6 col-lg-4 widget-pie__item">
+                    <div class="easy-pie-chart" data-percent="50" data-size="80" data-track-color="rgba(0,0,0,0.08)"
+                        data-bar-color="#fff">
+                        <span class="easy-pie-chart__value">92</span>
+                    </div>
+                    <div class="widget-pie__title">Email<br> Scheduled</div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-6 col-lg-4 widget-pie__item">
+                    <div class="easy-pie-chart" data-percent="11" data-size="80" data-track-color="rgba(0,0,0,0.08)"
+                        data-bar-color="#fff">
+                        <span class="easy-pie-chart__value">11</span>
+                    </div>
+                    <div class="widget-pie__title">Email<br> Bounced</div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-6 col-lg-4 widget-pie__item">
+                    <div class="easy-pie-chart" data-percent="52" data-size="80" data-track-color="rgba(0,0,0,0.08)"
+                        data-bar-color="#fff">
+                        <span class="easy-pie-chart__value">52</span>
+                    </div>
+                    <div class="widget-pie__title">Email<br> Opened</div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-6 col-lg-4 widget-pie__item">
+                    <div class="easy-pie-chart" data-percent="44" data-size="80" data-track-color="rgba(0,0,0,0.08)"
+                        data-bar-color="#fff">
+                        <span class="easy-pie-chart__value">44</span>
+                    </div>
+                    <div class="widget-pie__title">Storage<br>Remaining</div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-6 col-lg-4 widget-pie__item">
+                    <div class="easy-pie-chart" data-percent="78" data-size="80" data-track-color="rgba(0,0,0,0.08)"
+                        data-bar-color="#fff">
+                        <span class="easy-pie-chart__value">78</span>
+                    </div>
+                    <div class="widget-pie__title">Web Page<br> Views</div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-6 col-lg-4 widget-pie__item">
+                    <div class="easy-pie-chart" data-percent="32" data-size="80" data-track-color="rgba(0,0,0,0.08)"
+                        data-bar-color="#fff">
+                        <span class="easy-pie-chart__value">32</span>
+                    </div>
+                    <div class="widget-pie__title">Server<br> Processing</div>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col-md-6'>
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h4 class='card-title'>Sales Statistics</h4>
+                            <h6 class='card-subtitle'>Vestibulum purus quam scelerisque, mollis nonummy metus</h6>
+
+                            <div class='flot-chart flot-curved-line'></div>
+                            <div class='flot-chart-legends flot-chart-legends--curved'></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-md-6'>
+                    <div class='card'>
+                        <div class='card-body'>
+                            <h4 class='card-title'>Growth Rate</h4>
+                            <h6 class='card-subtitle'>Commodo luctus nisi erat porttitor ligula eget lacinia odio
+                                semnec elit</h6>
+
+                            <div class='flot-chart flot-line'></div>
+                            <div class='flot-chart-legends flot-chart-legends--line'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Default -->
+        <div class="modal fade" id="modal-default" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h5 class="modal-title pull-left">Alterar senha</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>Preencha os dados abaixo para ter sua senha alterada</p>
+                            <div class="form-group form-group--float">
+                                <input type="text" class="form-control" id="user" required>
+                                <label>Usuário</label>
+                                <i class="form-group__bar"></i>
+                            </div>
+                            <div class="form-group form-group--float">
+                                <input type="password" class="form-control" id="oldPassword" required>
+                                <label>Senha antiga</label>
+                                <i class="form-group__bar"></i>
+                            </div>
+                            <div class="form-group form-group--float">
+                                <input type="password" class="form-control" id="newPassword" required minl="8">
+                                <label>Senha nova</label>
+                                <i class="form-group__bar"></i>
+                            </div>
+                            <small class="form-text text-muted">
+                                Sua nova senha deve ter no mínimo 8 caracteres
+                            </small>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger btn--icon" data-dismiss="modal"><i class="zmdi zmdi-long-arrow-return"></i></button>
+                            <button type="submit" class="btn btn-success btn--icon"><i class="zmdi zmdi-check-all"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Older IE warning message -->
+    <!--[if IE]>
+                <div class='ie-warning'>
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class='ie-warning__downloads'>
+                        <a href='http://www.google.com/chrome'>
+                            <img src='img/browsers/chrome.png' alt=''>
+                        </a>
+
+                        <a href='https://www.mozilla.org/en-US/firefox/new'>
+                            <img src='img/browsers/firefox.png' alt=''>
+                        </a>
+
+                        <a href='http://www.opera.com'>
+                            <img src='img/browsers/opera.png' alt=''>
+                        </a>
+
+                        <a href='https://support.apple.com/downloads/safari'>
+                            <img src='img/browsers/safari.png' alt=''>
+                        </a>
+
+                        <a href='https://www.microsoft.com/en-us/windows/microsoft-edge'>
+                            <img src='img/browsers/edge.png' alt=''>
+                        </a>
+
+                        <a href='http://windows.microsoft.com/en-us/internet-explorer/download-ie'>
+                            <img src='img/browsers/ie.png' alt=''>
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+    <!-- Javascript -->
+    <!-- ../vendors -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/esm/popper.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js'></script>
+
+    <script src='vendors/bower_components/jquery-scrollLock/jquery-scrollLock.min.js'></script>
+
+    <!-- Charts Simple-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js'></script>
+    <script src='vendors/bower_components/flot.curvedlines/curvedLines.js'></script>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/salvattore/1.0.9/salvattore.min.js'></script>
+
+    <!-- Charts and maps-->
+    <script src='demo/js/flot-charts/curved-line.js'></script>
+    <script src='demo/js/flot-charts/dynamic.js'></script>
+    <script src='demo/js/flot-charts/line.js'></script>
+    <script src='demo/js/flot-charts/chart-tooltips.js'></script>
+    <script src='demo/js/other-charts.js'></script>
+    <script src='demo/js/jqvmap.js'></script>
+
+    <!-- App functions and actions -->
+    <script src='js/app.min.js'></script>
+
+
+    <script>
+        $('form').submit(function (event) {
+            var json = {};
+            json['user'] = $('#user').val();
+            json['oldPassword'] = $('#oldPassword').val();
+            json['newPassword'] = $('#newPassword').val();
+            // window.location.replace('fmp://$/Sistema%20Escolar?script=Web:%20Alterar%20Senha&param='.concat(JSON.stringify(json)));
+            console.log(JSON.stringify(json))
+            event.preventDefault();
+        });
+
+    </script>
+</body>
+
+</html>
