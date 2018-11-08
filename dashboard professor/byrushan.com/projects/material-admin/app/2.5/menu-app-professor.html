@@ -1,3 +1,4 @@
+cfHTML ( "
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -12,6 +13,9 @@
 
     <!-- App styles -->
     <link rel='stylesheet' href='css/app.min.css'>
+	<style>
+	"& WebResource::app.min.css &"
+	</style>
 </head>
 
 <body data-ma-theme='green'>
@@ -38,10 +42,10 @@
                         de Idiomas - Tiago Denardi</a></h1>
             </div>
 
-            <ul class="top-nav">
+            <ul class='top-nav'>
                 <li>
                     <a href='fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 285 ; Get ( FileName ) ) & "'>
-                        <i class="zmdi zmdi-square-right"></i>
+                        <i class='zmdi zmdi-square-right'></i>
                     </a>
                 </li>
             </ul>
@@ -50,15 +54,6 @@
 
         <aside class='sidebar sidebar--hidden'>
             <div class='scrollbar-inner'>
-                <div class='user'>
-                    <div class='user__info' data-toggle='dropdown'>
-                        <img class='user__img' src='data:image/png;base64, "& $$user.photo &"' alt=''>
-                        <div>
-                            <div class='user__name'>"& $$user.nome &"</div>
-                            <div class='user__email'>"& $$user.email &"</div>
-                        </div>
-                    </div>
-                </div>
 
                 <ul class='navigation'>
                     <li class='navigation__active'>
@@ -67,7 +62,7 @@
                         </a>
                     </li>
 
-                    <li class="navigation__sub">
+                    <li class='navigation__sub'>
                         <a href=''><i class='zmdi zmdi-accounts-list'></i> Alunos</a>
 
                         <ul>
@@ -77,7 +72,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href='fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 284 ; Get ( FileName ) ) & "'>
+                                <a href='fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 286 ; Get ( FileName ) ) & "'>
                                     <i class='zmdi zmdi-search'></i> Consultar
                                 </a>
                             </li>
@@ -85,7 +80,7 @@
                     </li>
 
                     <li>
-                        <a href='#modal-default' data-toggle="modal" data-target="#modal-default">
+                        <a href='#modal-default' data-toggle='modal' data-target='#modal-default'>
                             <i class='zmdi zmdi-lock-outline'></i> Senha
                         </a>
                     </li>
@@ -95,48 +90,48 @@
 
         <section class='content content--full'>
 
-            <div class="row quick-stats">
-                <div class="col-sm-6 col-md-3">
-                    <div class="quick-stats__item bg-blue">
-                        <div class="quick-stats__info">
-                            <h2>987,459</h2>
+            <div class='row quick-stats'>
+                <div class='col-sm-6 col-md-3'>
+                    <div class='quick-stats__item bg-blue'>
+                        <div class='quick-stats__info'>
+                            <h2>"&GLOBAL::GTEXTO&"</h2>
                             <small>Total de Aulas</small>
                         </div>
 
-                        <div class="quick-stats__chart sparkline-bar-stats">6,4,8,6,5,6,7,8,3,5,9,5</div>
+                        <div class='quick-stats__chart sparkline-bar-stats'>6,4,8,6,5,6,7,8,3,5,9,5</div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-3">
-                    <div class="quick-stats__item bg-amber">
-                        <div class="quick-stats__info">
-                            <h2>356,785K</h2>
+                <div class='col-sm-6 col-md-3'>
+                    <div class='quick-stats__item bg-amber'>
+                        <div class='quick-stats__info'>
+                            <h2>"&GLOBAL::GTEXTO[2]&"</h2>
                             <small>Total de Horas</small>
                         </div>
 
-                        <div class="quick-stats__chart sparkline-bar-stats">4,7,6,2,5,3,8,6,6,4,8,6</div>
+                        <div class='quick-stats__chart sparkline-bar-stats'>4,7,6,2,5,3,8,6,6,4,8,6</div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-3">
-                    <div class="quick-stats__item bg-purple">
-                        <div class="quick-stats__info">
-                            <h2>$58,778</h2>
+                <div class='col-sm-6 col-md-3'>
+                    <div class='quick-stats__item bg-purple'>
+                        <div class='quick-stats__info'>
+                            <h2>"&GLOBAL::GTEXTO[3]&"</h2>
                             <small>Total de Turmas Atendidas</small>
                         </div>
 
-                        <div class="quick-stats__chart sparkline-bar-stats">9,4,6,5,6,4,5,7,9,3,6,5</div>
+                        <div class='quick-stats__chart sparkline-bar-stats'>9,4,6,5,6,4,5,7,9,3,6,5</div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-3">
-                    <div class="quick-stats__item bg-red">
-                        <div class="quick-stats__info">
-                            <h2>214</h2>
+                <div class='col-sm-6 col-md-3'>
+                    <div class='quick-stats__item bg-red'>
+                        <div class='quick-stats__info'>
+                            <h2>"&GLOBAL::GTEXTO[4]&"</h2>
                             <small>Total de Alunos Atendidos</small>
                         </div>
 
-                        <div class="quick-stats__chart sparkline-bar-stats">5,6,3,9,7,5,4,6,5,6,4,9</div>
+                        <div class='quick-stats__chart sparkline-bar-stats'>5,6,3,9,7,5,4,6,5,6,4,9</div>
                     </div>
                 </div>
             </div>
@@ -146,19 +141,19 @@
                 <div class='col-md-6'>
                     <div class='card'>
                         <div class='card-body'>
-                            <h4 class='card-title'>Estatística Mensal</h4>
-                            <h6 class='card-subtitle'>Quantidade de aulas neste mês</h6>
+                            <h4 class='card-title'>Estatísticas Mensais</h4>
+                            <h6 class='card-subtitle'>Quantidade de aulas por mês</h6>
 
-                            <div class="flot-chart flot-bar"></div>
-                                <div class="flot-chart-legends flot-chart-legends--bar"></div>
+                            <div class='flot-chart flot-bar'></div>
+                                <div class='flot-chart-legends flot-chart-legends--bar'></div>
                         </div>
                     </div>
                 </div>
                 <div class='col-md-6'>
                     <div class='card'>
                         <div class='card-body'>
-                            <h4 class='card-title'>Estatísticas Mensais</h4>
-                            <h6 class='card-subtitle'>Quantidade de aulas por mês</h6>
+                            <h4 class='card-title'>Estatística Mensal</h4>
+                            <h6 class='card-subtitle'>Quantidade de aulas neste mês</h6>
 
                             <div class='flot-chart flot-curved-line'></div>
                             <div class='flot-chart-legends flot-chart-legends--curved'></div>
@@ -170,37 +165,37 @@
         </section>
 
         <!-- Default -->
-        <div class="modal fade" id="modal-default" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
+        <div class='modal fade' id='modal-default' tabindex='-1'>
+            <div class='modal-dialog'>
+                <div class='modal-content'>
                     <form>
-                        <div class="modal-header">
-                            <h5 class="modal-title pull-left">Alterar senha</h5>
+                        <div class='modal-header'>
+                            <h5 class='modal-title pull-left'>Alterar senha</h5>
                         </div>
-                        <div class="modal-body">
+                        <div class='modal-body'>
                             <p>Preencha os dados abaixo para ter sua senha alterada</p>
-                            <div class="form-group form-group--float">
-                                <input type="text" class="form-control" id="user" required>
+                            <div class='form-group form-group--float'>
+                                <input type='text' class='form-control' id='user' required>
                                 <label>Usuário</label>
-                                <i class="form-group__bar"></i>
+                                <i class='form-group__bar'></i>
                             </div>
-                            <div class="form-group form-group--float">
-                                <input type="password" class="form-control" id="oldPassword" required>
+                            <div class='form-group form-group--float'>
+                                <input type='password' class='form-control' id='oldPassword' required>
                                 <label>Senha antiga</label>
-                                <i class="form-group__bar"></i>
+                                <i class='form-group__bar'></i>
                             </div>
-                            <div class="form-group form-group--float">
-                                <input type="password" class="form-control" id="newPassword" required minl="8">
+                            <div class='form-group form-group--float'>
+                                <input type='password' class='form-control' id='newPassword' required minl='8'>
                                 <label>Senha nova</label>
-                                <i class="form-group__bar"></i>
+                                <i class='form-group__bar'></i>
                             </div>
-                            <small class="form-text text-muted">
+                            <small class='form-text text-muted'>
                                 Sua nova senha deve ter no mínimo 8 caracteres
                             </small>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger btn--icon" data-dismiss="modal"><i class="zmdi zmdi-long-arrow-return"></i></button>
-                            <button type="submit" class="btn btn-success btn--icon"><i class="zmdi zmdi-check-all"></i></button>
+                        <div class='modal-footer'>
+                            <button type='button' class='btn btn-danger btn--icon' data-dismiss='modal'><i class='zmdi zmdi-long-arrow-return'></i></button>
+                            <button type='submit' class='btn btn-success btn--icon'><i class='zmdi zmdi-check-all'></i></button>
                         </div>
                     </form>
                 </div>
@@ -245,10 +240,14 @@
 
     <!-- Javascript -->
     <!-- ../vendors -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/esm/popper.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js'></script>
+    <script src='vendors/bower_components/jquery-scrollLock/jquery-scrollLock.min.js'></script>
+	<script>
+	"& WebResource::jquery.scrollLock.min.js &"
+	</script>
 
     <!-- Charts Simple-->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js'></script>
@@ -257,13 +256,23 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.min.js'></script>
 
     <script src='vendors/bower_components/flot.curvedlines/curvedLines.js'></script>
+	<script>
+	"& WebResource::flot.curvedlines.js &"
+	</script>
     <script src='vendors/bower_components/flot.curvedlines/jquery.flot.orderBars.js'></script>
+	<script>
+	"& WebResource::flot.orderBars.js &"
+	</script>
+    
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/salvattore/1.0.9/salvattore.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js'></script>
 
     <!-- App functions and actions -->
     <script src='js/app.min.js'></script>
+	<script>
+	"& WebResource::app.min.js &"
+	</script>
 
 
     <script>
@@ -277,15 +286,7 @@
                     colors: ['rgba(0,188,212,0.001)', '#00BCD4']
                 }
             },
-            data: [
-                [new Date('01/01/2018'), 80],
-                [new Date('02/02/2018'), 30],
-                [new Date('03/03/2018'), 70],
-                [new Date('04/04/2018'), 10],
-                [new Date('05/05/2018'), 80],
-                [new Date('06/06/2018'), 10],
-                [new Date('09/09/2018'), 50]
-            ]
+            data: ["&GLOBAL::GTEXTO[6]&"]
         }];
 
 
@@ -301,8 +302,8 @@
                 },
             },
             xaxis: {
-                mode: "time",
-                timeformat: "%d/%m/%Y",
+                mode: 'time',
+                timeformat: '%d/%m',
                 tickLength: 0,
                 tickColor: '#fff',
                 tickDecimals: 0,
@@ -310,8 +311,8 @@
                     lineHeight: 13,
                     style: 'normal',
                     color: '#999999',
-                    size: 11
-                },
+                    size: 10
+                }
             },
             grid: {
                 borderWidth: 1,
@@ -348,39 +349,22 @@
     </script>
 
     <script>
-         var barChartData = [
+
+    var barChartData = [
         {
-            label: 'Green',
-            data: [[1,60], [2,30], [3,50], [4,100], [5,10], [6,90], [7,85]],
+            data: ["& GLOBAL::GTEXTO[5] &"],
             color: '#32c787',
             bars: {
                 order: 0
             }
-        },
-        {
-            label: 'Blue',
-            data: [[1,20], [2,90], [3,60], [4,40], [5,100], [6,25], [7,65]],
-            color: '#03A9F4',
-            bars: {
-                order: 1
-            }
-        },
-        {
-            label: 'Amber',
-            data: [[1,100], [2,20], [3,60], [4,90], [5,80], [6,10], [7,5]],
-            color: '#f5c942',
-            bars: {
-                order: 2
-            }
         }
     ];
 
-    // Chart Options
     var barChartOptions = {
         series: {
             bars: {
                 show: true,
-                barWidth: 0.05,
+                barWidth: 0.55,
                 fill: 1
             }
         },
@@ -396,18 +380,19 @@
             tickDecimals: 0,
             font :{
                 lineHeight: 13,
-                style: "normal",
-                color: "#9f9f9f",
+                style: 'normal',
+                color: '#9f9f9f',
             },
             shadowSize: 0
         },
         xaxis: {
+            mode: 'categories',
             tickColor: '#fff',
             tickDecimals: 0,
             font :{
                 lineHeight: 13,
-                style: "normal",
-                color: "#9f9f9f"
+                style: 'normal',
+                color: '#9f9f9f'
             },
             shadowSize: 0,
         },
@@ -421,7 +406,6 @@
         }
     };
 
-    // Create chart
     if ($('.flot-bar')[0]) {
         $.plot($('.flot-bar'), barChartData, barChartOptions);
     }
@@ -442,7 +426,7 @@
                 }
             });
 
-            $('<div class="flot-tooltip"></div>').appendTo('body');
+            $('<div class=\'flot-tooltip\'></div>').appendTo('body');
         }
     </script>
 
@@ -458,17 +442,18 @@
         }
     </script>
 
+<!-- window.location.replace('fmp://$/Sistema%20Escolar?script=Web:%20Alterar%20Senha&param='.concat(JSON.stringify(json))); -->
     <script>
         $('form').submit(function (event) {
             var json = {};
             json['user'] = $('#user').val();
             json['oldPassword'] = $('#oldPassword').val();
             json['newPassword'] = $('#newPassword').val();
-            // window.location.replace('fmp://$/Sistema%20Escolar?script=Web:%20Alterar%20Senha&param='.concat(JSON.stringify(json)));
-            console.log(JSON.stringify(json))
+            console.log(JSON.stringify(json));
+		    window.location.replace('fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 287 ; Get ( FileName )) &"&param='.concat(JSON.stringify(json)) );
             event.preventDefault();
         });
     </script>
 </body>
 
-</html>
+</html>" )
