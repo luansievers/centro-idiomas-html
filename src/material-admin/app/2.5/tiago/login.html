@@ -1,0 +1,80 @@
+<!-- cfHTML ( " -->
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no'>
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'>
+    <link rel='stylesheet' href='vendors/bower_components/animate.css/animate.min.css'>
+
+    <link rel='stylesheet' href='css/app.min.css'>
+    <style>
+        /* "& WebResource::app.min.css &" */
+    </style>
+</head>
+
+<body data-ma-theme='green'>
+    <div class='login'>
+
+        <!-- Login -->
+        <div class='login__block active' id='l-login'>
+            <div class='login__block__header'>
+                <img src='data:image/png;base64, "&Base64Encode ( Startup::LOGOCONTAINER )&"' class='widget-profile__img'
+                    alt=''>
+                Entre com seu informações abaixo
+            </div>
+
+            <div class='login__block__body'>
+                <form>
+                    <div class='form-group form-group--float form-group--centered'>
+                        <input type='text' class='form-control' id='user' required autocomplete='off' autofocus>
+                        <label>Usuário</label>
+                        <i class='form-group__bar'></i>
+                    </div>
+
+                    <div class='form-group form-group--float form-group--centered'>
+                        <input type='password' class='form-control' id='password' autocomplete='off' required>
+                        <label>Senha</label>
+                        <i class='form-group__bar'></i>
+                    </div>
+
+                    <button type='submit' class='btn btn--icon login__block__btn'><i class='zmdi zmdi-long-arrow-right'></i></button>
+                </form>
+            </div>
+        </div>
+
+        <script src='vendors/bower_components/jquery/dist/jquery.min.js'></script>
+        <script src='vendors/bower_components/popper.js/dist/umd/popper.min.js'></script>
+        <script src='vendors/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.5/platform.min.js'></script>
+
+        <script src='js/app.min.js'></script>
+        <script>
+            "& WebResource::app.min.js &"
+        </script>
+
+        <script>
+
+            $('form').submit(function (event) {
+
+                var json = {};
+
+                json['user'] = $('#user').val();
+
+                json['password'] = $('#password').val();
+
+                json['info'] = JSON.stringify(platform);
+
+                window.location.replace('fmp://$/" & Get ( FileName ) & "?script=" & ObjectScriptName ( 292 ; Get ( FileName ) ) & "&param='.concat(JSON.stringify(json)));
+
+                event.preventDefault();
+
+            });
+
+        </script>
+</body>
+
+</html>
+<!-- " ) -->
